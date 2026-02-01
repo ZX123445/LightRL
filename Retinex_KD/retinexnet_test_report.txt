@@ -1,0 +1,21 @@
+
+RetinexNet Model Test Report
+============================
+
+Configuration
+-------------
+Number of exposures: 5
+Knowledge distillation: Enabled
+Input size: 256x256
+Batch size: 1
+Test runs: 20
+Test device: cuda
+
+Results
+-------
+Total Parameters: 2,492,742
+Trainable Parameters: 650,693
+Model Size (approx): 9.51 MB
+Average Inference Time: 36.54 ms
+Throughput: 27.37 FPS
+Estimated Memory Consumption: 153.76 MB
