@@ -23,20 +23,6 @@ def denoise_image(img):
     return GaussianBlur(kernel_size=3, sigma=0.5)(img)
 
 
-def generate_pseudo_exposures(img, gamma_values=[0.5, 0.8, 1.0, 1.5, 2.0], denoise=False):
-    """生成固定 gamma 值的伪多曝光序列"""
-    img_normalized = normalize_image(img)
-    exposures = []
-
-    for gamma in gamma_values:
-        exp = gamma_correction(img_normalized, gamma)
-        if denoise and gamma < 0.7:  # 对低伽马图像去噪
-            exp = denoise_image(exp)
-        exposures.append(exp)
-
-    return exposures, gamma_values  # 直接返回传入的 gamma 值
-
-
 class LowLightDataset(Dataset):
     """低光图像数据集（单张图像生成伪多曝光序列）"""
 
