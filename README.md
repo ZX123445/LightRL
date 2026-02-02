@@ -1,5 +1,10 @@
 # LightRL
 
+
+python= 3.12
+ubuntu=22.2
+
+
 <img width="879" height="583" alt="image" src="https://github.com/user-attachments/assets/efa0d142-1a4f-4eaa-9dd0-6545043beafa" />
 
 
